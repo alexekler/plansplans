@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цілі сімейки Корецьких</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Цілі сімейки Корецьких</h1>
+    </header>
+    <main>
+        <div id="goals-container"></div>
+    </main>
+    <footer>
+        <button id="add-goal-btn">Додати ціль</button>
+    </footer>
+
+    <!-- Модальне вікно для додавання нової цілі -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Нова ціль</h2>
+            <form id="goal-form" enctype="multipart/form-data">
+                <label for="goal-text">Опис цілі:</label>
+                <textarea id="goal-text" name="goal-text" required></textarea>
+                <label for="goal-image-file">Зображення:</label>
+                <input type="file" id="goal-image-file" name="goal-image-file" accept="image/*">
+                <label for="goal-year">Ціль на</label>
+                <input type="number" id="goal-year" name="goal-year" min="1900" max="2100" placeholder="Напиши рік на яку заплановано ціль">
+                <button type="submit">Додати</button>
+            </form>            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
